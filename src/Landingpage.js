@@ -30,7 +30,7 @@ function LandingPage() {
         <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <button onClick={openModal} className="text-xl text-gray-300 hover:underline">Contact</button>
             <ContactModal isOpen={isModalOpen} onClose={closeModal} />
-            <button onClick={() => loginWithRedirect()} className="text-xl text-grey-100 hover:underline">Login</button>
+            <button onClick={() => loginWithRedirect()} className="text-xl text-gray-300 hover:underline">Login</button>
         </div>
     </div>
 </nav>
