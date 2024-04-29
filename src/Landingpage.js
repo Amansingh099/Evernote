@@ -37,7 +37,7 @@ function LandingPage() {
 <div className="grid grid-cols-2 gap-8 mx-auto max-w-screen-xl p-4">
         <div className="col-span-1">
           <span className="text-4xl font-bold text-gray-900 mb-4 quote">Stay organized and inspired with Evernote</span>
-          <button className="butnstart bg-gray-900 hover:bg-gray-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg btnstart">
+          <button onClick={() => loginWithRedirect()} className="butnstart bg-gray-900 hover:bg-gray-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg btnstart">
   Get Started
 </button>
 
