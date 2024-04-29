@@ -1,15 +1,17 @@
 import React from 'react'
-import Note from './Note';
+import Note from './Notedelete';
 import Footer from './Footer';
 import './Trash.css'
 import trashCanImage from'./images.png'
-export default function Trash({deletedNotes, setDeletedNotes}) {
+export default function Trash({deletedNotes, setDeletedNotes,setNotes}) {
     const deleteNote = (id) => {
-        setDeletedNotes((prevNotes) => {
-          return prevNotes.filter((noteItem, index) => {
-            return index !== id;
-          });
-        });
+      const deletedNote = deletedNotes[id];
+    
+      // Remove the note from the deletedNotes array
+      setDeletedNotes((prevNotes) => prevNotes.filter((_, index) => index !== id));
+      
+      // Add the deleted note back to the main notes list
+      setNotes((prevNotes) => [...prevNotes, deletedNote]);
       }; 
   return (
     <div>

@@ -39,7 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home addNote={addNote} deleteNote={deleteNote} notes={notes} />} />
           <Route path="/searchbar" element={<SearchBar deleteNote={deleteNote} notes={notes} />} />
-          <Route path="/trash" element={<Trash deletedNotes={deletedNotes} setDeletedNotes={setDeletedNotes} />} />
+          <Route path="/trash" element={<Trash deletedNotes={deletedNotes} setDeletedNotes={setDeletedNotes} setNotes={setNotes}/>} />
           <Route path="/account" element={<Account />} />
         </Routes>
       </div>
